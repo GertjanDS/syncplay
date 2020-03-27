@@ -58,11 +58,6 @@ NSIS_SCRIPT_TEMPLATE = r"""
   !include FileFunc.nsh
 
   LoadLanguageFile "$${NSISDIR}\Contrib\Language files\English.nlf"
-  LoadLanguageFile "$${NSISDIR}\Contrib\Language files\Polish.nlf"
-  LoadLanguageFile "$${NSISDIR}\Contrib\Language files\Russian.nlf"
-  LoadLanguageFile "$${NSISDIR}\Contrib\Language files\German.nlf"
-  LoadLanguageFile "$${NSISDIR}\Contrib\Language files\Italian.nlf"
-  LoadLanguageFile "$${NSISDIR}\Contrib\Language files\Spanish.nlf"
 
   Unicode true
 
@@ -81,25 +76,6 @@ NSIS_SCRIPT_TEMPLATE = r"""
   VIAddVersionKey /LANG=$${LANG_ENGLISH} "LegalCopyright" "Syncplay"
   VIAddVersionKey /LANG=$${LANG_ENGLISH} "FileDescription" "Syncplay"
 
-  VIAddVersionKey /LANG=$${LANG_POLISH} "ProductName" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_POLISH} "FileVersion" "$version.0"
-  VIAddVersionKey /LANG=$${LANG_POLISH} "LegalCopyright" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_POLISH} "FileDescription" "Syncplay"
-
-  VIAddVersionKey /LANG=$${LANG_RUSSIAN} "ProductName" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_RUSSIAN} "FileVersion" "$version.0"
-  VIAddVersionKey /LANG=$${LANG_RUSSIAN} "LegalCopyright" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_RUSSIAN} "FileDescription" "Syncplay"
-
-  VIAddVersionKey /LANG=$${LANG_ITALIAN} "ProductName" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_ITALIAN} "FileVersion" "$version.0"
-  VIAddVersionKey /LANG=$${LANG_ITALIAN} "LegalCopyright" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_ITALIAN} "FileDescription" "Syncplay"
-
-  VIAddVersionKey /LANG=$${LANG_SPANISH} "ProductName" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_SPANISH} "FileVersion" "$version.0"
-  VIAddVersionKey /LANG=$${LANG_SPANISH} "LegalCopyright" "Syncplay"
-  VIAddVersionKey /LANG=$${LANG_SPANISH} "FileDescription" "Syncplay"
 
   LangString ^SyncplayLanguage $${LANG_ENGLISH} "en"
   LangString ^Associate $${LANG_ENGLISH} "Associate Syncplay with multimedia files."
@@ -110,51 +86,7 @@ NSIS_SCRIPT_TEMPLATE = r"""
   LangString ^AutomaticUpdates $${LANG_ENGLISH} "Check for updates automatically"
   LangString ^UninstConfig $${LANG_ENGLISH} "Delete configuration file."
 
-  LangString ^SyncplayLanguage $${LANG_POLISH} "pl"
-  LangString ^Associate $${LANG_POLISH} "Skojarz Syncplaya z multimediami"
-  LangString ^Shortcut $${LANG_POLISH} "Utworz skroty w nastepujacych miejscach:"
-  LangString ^StartMenu $${LANG_POLISH} "Menu Start"
-  LangString ^Desktop $${LANG_POLISH} "Pulpit"
-  LangString ^QuickLaunchBar $${LANG_POLISH} "Pasek szybkiego uruchamiania"
-  LangString ^UninstConfig $${LANG_POLISH} "Usun plik konfiguracyjny."
-
-  LangString ^SyncplayLanguage $${LANG_RUSSIAN} "ru"
-  LangString ^Associate $${LANG_RUSSIAN} "Ассоциировать Syncplay с видеофайлами"
-  LangString ^Shortcut $${LANG_RUSSIAN} "Создать ярлыки:"
-  LangString ^StartMenu $${LANG_RUSSIAN} "в меню Пуск"
-  LangString ^Desktop $${LANG_RUSSIAN} "на рабочем столе"
-  LangString ^QuickLaunchBar $${LANG_RUSSIAN} "в меню быстрого запуска"
-  LangString ^AutomaticUpdates $${LANG_RUSSIAN} "Проверять обновления автоматически"; TODO: Confirm Russian translation ("Check for updates automatically")
-  LangString ^UninstConfig $${LANG_RUSSIAN} "Удалить файл настроек."
-
-  LangString ^SyncplayLanguage $${LANG_GERMAN} "de"
-  LangString ^Associate $${LANG_GERMAN} "Syncplay als Standardprogramm für Multimedia-Dateien verwenden."
-  LangString ^Shortcut $${LANG_GERMAN} "Erstelle Verknüpfungen an folgenden Orten:"
-  LangString ^StartMenu $${LANG_GERMAN} "Startmenü"
-  LangString ^Desktop $${LANG_GERMAN} "Desktop"
-  LangString ^QuickLaunchBar $${LANG_GERMAN} "Schnellstartleiste"
-  LangString ^AutomaticUpdates $${LANG_GERMAN} "Automatisch nach Updates suchen";
-  LangString ^UninstConfig $${LANG_GERMAN} "Konfigurationsdatei löschen."
-
-  LangString ^SyncplayLanguage $${LANG_ITALIAN} "it"
-  LangString ^Associate $${LANG_ITALIAN} "Associa Syncplay con i file multimediali."
-  LangString ^Shortcut $${LANG_ITALIAN} "Crea i collegamenti nei percorsi seguenti:"
-  LangString ^StartMenu $${LANG_ITALIAN} "Menu Start"
-  LangString ^Desktop $${LANG_ITALIAN} "Desktop"
-  LangString ^QuickLaunchBar $${LANG_ITALIAN} "Barra di avvio rapido"
-  LangString ^AutomaticUpdates $${LANG_ITALIAN} "Controllo automatico degli aggiornamenti"
-  LangString ^UninstConfig $${LANG_ITALIAN} "Cancella i file di configurazione."
-
-  LangString ^SyncplayLanguage $${LANG_SPANISH} "es"
-  LangString ^Associate $${LANG_SPANISH} "Asociar Syncplay con archivos multimedia."
-  LangString ^Shortcut $${LANG_SPANISH} "Crear accesos directos en las siguientes ubicaciones:"
-  LangString ^StartMenu $${LANG_SPANISH} "Menú de inicio"
-  LangString ^Desktop $${LANG_SPANISH} "Escritorio"
-  LangString ^QuickLaunchBar $${LANG_SPANISH} "Barra de acceso rápido"
-  LangString ^AutomaticUpdates $${LANG_SPANISH} "Buscar actualizaciones automáticamente"
-  LangString ^UninstConfig $${LANG_SPANISH} "Borrar archivo de configuración."
-
-  ; Remove text to save space
+   ; Remove text to save space
   LangString ^ClickInstall $${LANG_GERMAN} " "
 
   PageEx license
@@ -249,16 +181,6 @@ NSIS_SCRIPT_TEMPLATE = r"""
     Push ""
     Push $${LANG_ENGLISH}
     Push English
-    Push $${LANG_POLISH}
-    Push Polski
-    Push $${LANG_RUSSIAN}
-    Push Русский
-    Push $${LANG_GERMAN}
-    Push Deutsch
-    Push $${LANG_ITALIAN}
-    Push Italiano
-    Push $${LANG_SPANISH}
-    Push Español
     Push A ; A means auto count languages
     LangDLL::LangDialog "Language Selection" "Please select the language of Syncplay and the installer"
     Pop $$LANGUAGE

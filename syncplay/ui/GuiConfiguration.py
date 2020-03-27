@@ -1048,6 +1048,15 @@ class ConfigDialog(QtWidgets.QDialog):
         self.chatFrame.setLayout(self.chatLayout)
         self.stackedLayout.addWidget(self.chatFrame)
 
+        self.chatSoundEffectsGroup = QtWidgets.QGroupBox(getMessage("chatsoundeffects-label"))
+        self.chatSoundEffectsLayout = QtWidgets.QVBoxLayout()
+        self.chatSoundEffectsGroup.setLayout(self.chatSoundEffectsLayout)
+        self.chatSoundEffectsCheckbox = QCheckBox(getMessage("chatsoundeffects-label"))
+        self.chatSoundEffectsCheckbox.setObjectName("chatSoundEffectsEnabled")
+        self.chatSoundEffectsLayout.addWidget(self.chatSoundEffectsCheckbox)
+        self.chatLayout.addWidget(self.chatSoundEffectsGroup)
+
+
     def fontDialog(self, configName):
             font = QtGui.QFont()
             font.setFamily(self.config[configName + "FontFamily"])

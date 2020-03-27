@@ -17,6 +17,11 @@ from twisted.internet.endpoints import HostnameEndpoint
 from twisted.internet.protocol import ClientFactory
 from twisted.internet import reactor, task, defer, threads
 
+from syncplay.utils import getSoundResourcesPath
+
+from pygame import mixer
+
+
 try:
     import certifi
     from twisted.internet.ssl import Certificate, optionsForClientTLS
@@ -1520,6 +1525,18 @@ class UiManager(object):
         else:
             self.showOSDMessage(messageString, duration=constants.OSD_DURATION)
         self.__ui.showMessage(messageString)
+
+        from syncplay.ui.ConfigurationGetter import ConfigurationGetter
+        if self._client._config['chatSoundEffectsEnabled']:
+            self.playChatSound(self)
+
+    def playChatSound(self, username):
+        pingSound = getSoundResourcesPath() + 'messagePing.mp3'
+        mixer.init()
+        mixer.music.load(pingSound)
+        mixer.music.play()
+
+
 
     def setSSLMode(self, sslMode, sslInformation=""):
         self.__ui.setSSLMode(sslMode, sslInformation)

@@ -175,10 +175,16 @@ def getResourcesPath():
     else:
         return findWorkingDir() + "/resources/"
 
+def getSoundResourcesPath():
+    if isWindows():
+        return  getResourcesPath() + "sounds\\"
+    else:
+        return getResourcesPath() + "sounds/"
 
 resourcespath = getResourcesPath()
 posixresourcespath = findWorkingDir().replace("\\", "/") + "/resources/"
-
+soundresourcespath = getSoundResourcesPath()
+posixsoundresourcespath = posixresourcespath + "/sounds/"
 
 def getDefaultMonospaceFont():
     return constants.MONOSPACE_FONT

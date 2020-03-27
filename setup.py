@@ -17,7 +17,7 @@ else:
 
 setuptools.setup(
     name="syncplay",
-    version=syncplay_version,
+    version="Unofficial, self-compiled",
     author="Syncplay",
     author_email="dev@syncplay.pl",
     description=' '.join([

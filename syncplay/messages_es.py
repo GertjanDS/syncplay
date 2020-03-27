@@ -258,6 +258,7 @@ es = {
     "chatoutputposition-label": "Modo de salida",
     "chat-chatroom-option": "Estilo de sala de chat",
     "chat-scrolling-option": "Estilo de desplazamiento",
+    "chatsoundeffects-label": "Enable soundeffects when sending/receiving messages", # TODO: Translate
 
     "mpv-key-tab-hint": "[TAB] para alternar acceso a los accesos directos de las teclas de la fila del alfabeto",
     "mpv-key-hint": "[INTRO] para enviar mensaje. [ESC] para salir del modo de chat.",

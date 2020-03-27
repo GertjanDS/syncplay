@@ -260,6 +260,7 @@ ru = {
     "chatoutputposition-label": "Output mode",  # TODO: Translate
     "chat-chatroom-option": "Chatroom style",  # TODO: Translate
     "chat-scrolling-option": "Scrolling style",  # TODO: Translate
+    "chatsoundeffects-label": "Enable soundeffects when sending/receiving messages",  # TODO: Translate
 
     "mpv-key-tab-hint": "[TAB] to toggle access to alphabet row key shortcuts.",  # TODO: Translate
     "mpv-key-hint": "[ENTER] to send message. [ESC] to escape chat mode.",  # TODO: Translate

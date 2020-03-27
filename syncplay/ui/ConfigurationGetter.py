@@ -83,6 +83,7 @@ class ConfigurationGetter(object):
             "chatOutputFontWeight": constants.DEFAULT_CHAT_FONT_WEIGHT,
             "chatOutputFontUnderline": False,
             "chatOutputMode": constants.CHATROOM_MODE,
+            "chatSoundEffectsEnabled": True,
             "chatMaxLines": 7,
             "chatTopMargin": 25,
             "chatLeftMargin": 20,
@@ -141,7 +142,8 @@ class ConfigurationGetter(object):
             "chatDirectInput",
             "chatMoveOSD",
             "chatOutputEnabled",
-            "chatOutputFontUnderline"
+            "chatOutputFontUnderline",
+            "chatSoundEffectsEnabled"
         ]
         self._tristate = [
             "checkForUpdatesAutomatically",

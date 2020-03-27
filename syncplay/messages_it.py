@@ -258,6 +258,7 @@ it = {
     "chatoutputposition-label": "Modalità di output",
     "chat-chatroom-option": "Stile chatroom",
     "chat-scrolling-option": "A scorrimento",
+    "chatsoundeffects-label": "Enable soundeffects when sending/receiving messages", #TODO: Translate
 
     "mpv-key-tab-hint": "[TAB] per attivare le scorciatoie da tastiera e disattivare la chat.",
     "mpv-key-hint": "[Invio] per inviare un messaggio. [Esc] per uscire dalla modalità chat.",

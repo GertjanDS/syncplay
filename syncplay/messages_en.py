@@ -256,6 +256,7 @@ en = {
     "chatoutputfont-label": "Chat output font",
     "chatoutputenabled-label": "Enable chat output in media player (mpv only for now)",
     "chatoutputposition-label": "Output mode",
+    "chatsoundeffects-label": "Enable soundeffects when sending/receiving messages",
     "chat-chatroom-option": "Chatroom style",
     "chat-scrolling-option": "Scrolling style",
 
@@ -421,6 +422,7 @@ en = {
     "chatoutputmode-tooltip": "How chat messages are displayed.",
     "chatoutputmode-chatroom-tooltip": "Display new lines of chat directly below previous line.",
     "chatoutputmode-scrolling-tooltip": "Scroll chat text from right to left.",
+    "chatsoundeffectsenabled-tooltip": "Play some sound when sending/receiving messages.",
 
     "help-tooltip": "Opens the Syncplay.pl user guide.",
     "reset-tooltip": "Reset all settings to the default configuration.",
